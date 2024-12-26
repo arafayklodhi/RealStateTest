@@ -24,6 +24,43 @@ const topData = [
     },
 ]
 
+const facilitiesData = [
+    {
+        name: 'Car Parking',
+        icon: images.parkedCar
+    },
+    {
+        name: 'Swimming Pool',
+        icon: images.sport
+    },
+    {
+        name: 'Gym & Fit',
+        icon: images.barbell
+    },
+    {
+        name: 'Restaurant',
+        icon: images.restaurant
+    },
+    {
+        name: 'Wi-Fi',
+        icon: images.wifi
+    },
+    {
+        name: 'Pet Center',
+        icon: images.pets
+    },
+    {
+        name: 'Sport clony',
+        icon: images.running
+    },
+    {
+        name: 'Laundry',
+        icon: images.laundry
+    },
+
+
+]
+
 const Description = () => {
 
     return (
@@ -43,13 +80,13 @@ const Description = () => {
                 <Text style={styles.Con2Text}>Listing Agent</Text>
                 <View style={styles.Con2a}>
                     <View style={{
-                        flexDirection:'row',
-                        alignItems:'center'
+                        flexDirection: 'row',
+                        alignItems: 'center'
                     }}>
                         <View style={{
                             width: width * 0.095,
                             height: width * 0.095,
-                            marginRight:width*0.02
+                            marginRight: width * 0.02
                         }}>
                             <Image source={images.user} resizeMode='contain' style={{
                                 width: '100%',
@@ -70,40 +107,103 @@ const Description = () => {
                         </View>
                     </View>
                     <View style={{
-                        flexDirection:'row',
-                        alignItems:'center'
+                        flexDirection: 'row',
+                        alignItems: 'center'
                     }}>
                         <View style={{
                             width: width * 0.095,
                             height: width * 0.095,
-                            backgroundColor:color.WHITE,
+                            backgroundColor: color.WHITE,
                             borderRadius: width / 2,
-                            alignItems:'center',
-                            justifyContent:'center',
-                            elevation:5,
-                            marginRight:width*0.02
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            elevation: 5,
+                            marginRight: width * 0.02
                         }}>
                             <Image source={images.mail} resizeMode='contain' style={{
                                 width: '50%',
                                 height: '50%',
-                                tintColor:color.BLUE
+                                tintColor: color.BLUE
                             }} />
                         </View>
                         <View style={{
                             width: width * 0.095,
                             height: width * 0.095,
-                            backgroundColor:color.WHITE,
+                            backgroundColor: color.WHITE,
                             borderRadius: width / 2,
-                            alignItems:'center',
-                            justifyContent:'center',
-                            elevation:5
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            elevation: 5
                         }}>
                             <Image source={images.call} resizeMode='contain' style={{
                                 width: '50%',
                                 height: '50%',
-                                tintColor:color.BLUE
+                                tintColor: color.BLUE
                             }} />
                         </View>
+                    </View>
+                </View>
+                <Text style={styles.Con2Text}>Facilities</Text>
+                <View style={styles.Con3}>
+                    {facilitiesData.map((val, i) => (
+                        <View key={i} style={styles.Con3a}>
+                            <View style={{
+                                width: width * 0.06,
+                                height: width * 0.06,
+
+                            }}>
+                                <Image
+                                    source={val.icon}
+                                    resizeMode='contain'
+                                    style={{
+                                        width: '100%',
+                                        height: '100%',
+                                        tintColor: color.BLUE
+                                    }}
+                                />
+                            </View>
+                            <Text
+                                numberOfLines={1}
+                                ellipsizeMode='tail'
+                                style={{
+                                    fontSize: width * 0.03,
+                                    color: color.blackOpacity70,
+
+                                }}>{val.name}</Text>
+                        </View>
+
+                    ))}
+                </View>
+                <View style={{ width: '95%', borderBottomWidth: 1, borderBottomColor: color.blackOpacity20, paddingBottom: width * 0.01, alignSelf: 'center', justifyContent: 'space-between', flexDirection: 'row', alignItems: 'center' }}>
+                    <Text style={styles.Con2Text}>Address</Text>
+                    <Text style={styles.Con4Text}>View on Map</Text>
+                </View>
+                <View style={{
+                    width: width * 0.95,
+                    alignSelf: 'center',
+                    paddingVertical: 5,
+                    // backgroundColor: 'red'
+                }}>
+                    <View style={{
+                        width: '100%',
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                        // justifyContent:''
+                    }}>
+                        <View style={{
+                            width: width * 0.04,
+                            height: width * 0.04,
+                            marginRight: width * 0.02
+                        }}>
+                            <Image source={images.location} resizeMode='contain' style={{
+                                width: '100%',
+                                height: '100%'
+                            }} />
+                        </View>
+                        <Text style={{
+                            fontSize: width * 0.035,
+                            color: color.blackOpacity70
+                        }}>Lorem Ipsum is simply dummy text</Text>
                     </View>
                 </View>
             </View>
@@ -162,11 +262,35 @@ const styles = StyleSheet.create({
         color: color.BLACK,
         fontWeight: 'bold'
     },
+    Con4Text: {
+        fontSize: width * 0.035,
+        color: color.BLUE,
+        fontWeight: 'bold',
+        marginRight: width * 0.01
+    },
     Con2a: {
         width: '100%',
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginVertical:width*0.03
+        marginVertical: width * 0.03
+    },
+    Con3: {
+        width: "100%",
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: 'space-evenly',
+        marginVertical: width * 0.02
+    },
+    Con3a: {
+        width: width * 0.2,
+        height: width * 0.2,
+        backgroundColor: color.WHITE,
+        marginRight: width * 0.02,
+        marginBottom: width * 0.02,
+        alignItems: 'center',
+        justifyContent: 'center',
+        elevation: 5,
+        borderRadius: width * 0.04
     }
 })

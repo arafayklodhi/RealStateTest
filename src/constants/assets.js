@@ -23,7 +23,15 @@ export const images = {
     search: require(`${imgPath}search.png`), //exmaple imports
     star: require(`${imgPath}star.png`), //exmaple imports
     card: require(`${imgPath}card.png`), //exmaple imports
-    mail: require(`${imgPath}email.png`), //exmaple imports
     call: require(`${imgPath}call.png`), //exmaple imports
     user: require(`${imgPath}user.jpg`), //exmaple imports
+    mail: require(`${imgPath}email.png`), //exmaple imports
+    parkedCar: require(`${imgPath}parkedCar.png`), //exmaple imports
+    barbell: require(`${imgPath}barbell.png`), //exmaple imports
+    laundry: require(`${imgPath}laundry.png`), //exmaple imports
+    pets: require(`${imgPath}pets.png`), //exmaple imports
+    restaurant: require(`${imgPath}restaurant.png`), //exmaple imports
+    running: require(`${imgPath}running.png`), //exmaple imports
+    sport: require(`${imgPath}sport.png`), //exmaple imports
+    wifi: require(`${imgPath}wifi.png`), //exmaple imports
 };

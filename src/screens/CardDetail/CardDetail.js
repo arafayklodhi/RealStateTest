@@ -4,6 +4,7 @@ import { images } from '../../constants/assets'
 import HeaderDetail from '../../components/HeaderDetail'
 import color from '../../constants/color'
 import TobBar from '../../navigation/TobBar'
+import PriceComponent from './PriceComponent'
 
 const { width } = Dimensions.get('screen')
 const CardDetail = () => {
@@ -46,38 +47,21 @@ const CardDetail = () => {
                     <Text style={styles.rightMidText}>Woodland Appartment</Text>
                     <Text style={styles.rightMidAddressConText}>1012 Ocean avanue, New york, USA</Text>
                 </View>
-                {/* <View style={{
-                    width:'100%',
-                    flexDirection:'row',
-                    justifyContent:'space-between',
-                    alignItems:'center',
-                    zIndex:9999,
-                    top:width*0.07
-                }}>
-                    <View style={{
-                        width:'33%',
-                        alignItems:'center',
-                        justifyContent:'center'
-                    }}>
-                    <Text style={styles.rightMidAddressConText1}>1012</Text>
-                    </View>
-                    <View style={{
-                        width:'33%',
-                        alignItems:'center',
-                        justifyContent:'center'
-                    }}>
-                    <Text style={styles.rightMidAddressConText1}>1012</Text>
-                    </View>
-                    <View style={{
-                        width:'33%',
-                        alignItems:'center',
-                        justifyContent:'center'
-                    }}>
-                    <Text style={styles.rightMidAddressConText1}>1012</Text>
-                    </View>
-                </View> */}
-                <TobBar/>
+                <TobBar />
             </ScrollView>
+            <View style={{
+                width: '100%',
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                zIndex: 9999,
+                bottom: 0,
+                position: 'absolute',
+                borderTopWidth: 1,
+                borderTopColor: color.blackOpacity10
+            }}>
+                <PriceComponent />
+            </View>
         </View>
     )
 }
